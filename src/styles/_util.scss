@@ -1,0 +1,138 @@
+/**
+*
+* Utility
+*
+**/
+
+// Variables
+
+// Fonts
+$fontDefault: 'Open Sans', Helvetica, sans-serif;
+$fontHighlight: 'Bitter', Helvetica, sans-serif;
+// $fontDefault: 'Open Sans', Helvetica, sans-serif;
+// $fontHighlight: 'Arvo', Helvetica, sans-serif;
+$fontBase: 16px;
+
+// Defining baseline line height
+$lineHeight: 26px;
+
+// Colors
+$colorText: #222;
+$colorLink: #557B95;
+$colorPrimary: #3890CC;
+$colorHighlight: #70A7CC;
+
+$colorBlue: #3C85D4;
+$colorBlueDark: #17304C;
+$colorBlueGray: #2E3C4C;
+$colorBlueLink: #5C7999;
+$colorBlueLinkVisted: #7AA1CC;
+
+// https://kuler.adobe.com/Portfolio-color-theme-4111800/
+
+// $colorLink: #1E8CBE;
+// $colorLink: #F3A155;
+// $colorLink: #1DBEB8;
+
+// Default breakpoints
+$medium: 620px;
+$wide: 800px;
+$huge: 1600px;
+$mediumContainer: 688px;
+$wideContainer: 864px;
+
+ // Defining grid sizes
+$mediumColCount: 3;
+$mediumColWidth: 30.3%;
+$mediumGutterWidth: 4.5%;
+$wideColCount: 4;
+$wideColWidth: 22.2%;
+$wideGutterWidth: 3.7%;
+
+// Helpful mixins
+@mixin prefixr($property, $value...) {
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+            #{$property}: $value;
+}
+
+@mixin media-query($media-query) {
+    @if $media-query == small {
+      @media only screen and (max-width:$medium - 1) { @content; }
+    }
+
+    @if $media-query == medium {
+      @media only screen and (min-width:$medium) { @content; }
+    }
+
+    @if $media-query == medium-only {
+      @media only screen and (min-width:$medium) and (max-width: $wide - 1) { @content; }
+    }
+
+    @if $media-query == wide {
+      @media only screen and (min-width:$wide) { @content; }
+    }
+
+    @if $media-query == huge {
+      @media only screen and (min-width:$huge) { @content; }
+    }
+}
+
+@mixin small-only { @include media-query(small) { @content }; }
+@mixin medium { @include media-query(medium) { @content }; }
+@mixin medium-only { @include media-query(medium-only) { @content }; }
+@mixin wide { @include media-query(wide) { @content }; }
+@mixin huge { @include media-query(huge) { @content }; }
+
+// Mixin to constrain elements
+@mixin container($isRelative: false) {
+  @include prefixr(box-sizing, content-box);
+
+  @if $isRelative {
+    position: relative;
+  }
+
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  @include medium {
+    padding-left: 4.8%;
+    padding-right: 4.8%;
+    max-width: $mediumContainer;
+  }
+
+  @include wide {
+    padding-left: 4.4%;
+    padding-right: 4.4%;
+    max-width: $wideContainer;
+  }
+}
+
+// Grid CSS rules
+@mixin rule--col($mediaQuery) {
+  @if $mediaQuery == medium {
+    float: left;
+    margin-right: $mediumGutterWidth;
+  }
+
+  @if $mediaQuery == wide {
+    float: left;
+    margin-right: $wideGutterWidth;
+  }
+}
+
+// Clearfix
+.clear {
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}

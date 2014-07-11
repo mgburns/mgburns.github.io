@@ -1,0 +1,35 @@
+/**
+*
+* Typography
+*
+**/
+
+html, body, button {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+body {
+  font-family: $fontDefault;
+  font-size: $fontBase;
+  line-height: 1.6250em; /* 26px */
+  color: $colorText;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: $fontHighlight;
+    text-align: center;
+    font-weight: bold;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+em,
+i {
+  text-transform: uppercase;
+  font-style: italic;
+}

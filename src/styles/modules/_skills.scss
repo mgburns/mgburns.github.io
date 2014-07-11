@@ -1,0 +1,192 @@
+.skill-list,
+.skill-list ul {
+    padding: 0;
+    text-align: center;
+}
+
+.skill-list li {
+    list-style: none;
+}
+
+// .skill-list h4 {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 25%;
+// }
+
+// .skill-list > li {
+//     background-color: $colorLink;
+//     color: #fff;
+// }
+
+// .skill-list ul {
+//     background-color: #fff;
+//     color: $colorText;
+//     margin: 0;
+//     display: inline-block;
+//     width: 74.55%;
+// }
+
+// .skill-list ul li {
+//     display: inline-block;
+// }
+
+.skill-list ul li {
+    display: inline-block;
+    width: 25%;
+    margin: 20px 5px;
+    height: 50px;
+    text-indent: -9999px;
+
+    @include medium {
+        width: 20%;
+        margin: 15px 10px;
+    }
+
+    @include wide {
+        width: 15%;
+    }
+}
+
+// Heading
+.skill-list h4 {
+    // background-color: $colorLink;
+    // color: $colorLink;
+    // border-top: 3px solid $colorLink;
+    // border-bottom: 3px solid $colorLink;
+    font-family: $fontHighlight;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+// Icons
+
+.skill-list .html {
+    background: url(../images/html.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .css {
+    background: url(../images/css.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .javascript {
+    background: url(../images/javascript.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .php {
+    background: url(../images/php.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .python {
+    background: url(../images/python.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .wordpress {
+    background: url(../images/wordpress.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .django {
+    background: url(../images/django.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .edx {
+    background: url(../images/edx.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .edx {
+    background: url(../images/edx.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .apache {
+    background: url(../images/apache.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .mysql {
+    background: url(../images/mysql.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .osx {
+    background: url(../images/osx.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .ubuntu {
+    background: url(../images/ubuntu.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .centos {
+    background: url(../images/centos.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .aws {
+    background: url(../images/aws.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .rackspace {
+    background: url(../images/rackspace.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .ansible {
+    background: url(../images/ansible.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .puppet {
+    background: url(../images/puppet.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .grunt {
+    background: url(../images/grunt.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .node {
+    background: url(../images/node.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.skill-list .noicon {
+    display: none;
+}
+
+.skill-list .text .noicon {
+    display: inherit;
+}
+
+.skill-list.text h4 {
+    margin: 2em 0 1.2em 0;
+}
+
+.skill-list.text ul > li {
+    background: none;
+    text-indent: 0;
+    display: inline;
+}
+
+.skill-list.text.vertical > li {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+}
+
+.skill-list.text.vertical ul > li {
+    display: block;
+    height: auto;
+    width: auto;
+}

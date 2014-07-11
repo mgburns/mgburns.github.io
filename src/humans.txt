@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Mike Burns -- Developer & Designer -- @gradyetc
+
+# THANKS
+
+    Google Web Starter Kit
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3

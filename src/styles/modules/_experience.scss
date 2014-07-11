@@ -1,0 +1,42 @@
+
+#experience {
+    .job-title,
+    h3 {
+        text-align: center;
+
+        @include wide {
+            text-align: right;
+        }
+    }
+
+    .positions {
+        margin: 0;
+        padding: 0;
+        font-size: 0.9em;
+        list-style: none;
+        text-transform: uppercase;
+
+        .duration {
+            text-transform: none;
+            font-size: 0.8em;
+            display: block;
+            font-style: italic;
+        }
+    }
+
+    h4 {
+        text-align: left;
+    }
+
+    .responsibilities {
+        list-style: none;
+        padding: 0;
+
+        li {
+
+            &:before {
+                content: "\0BB \020";
+            }
+        }
+    }
+}
